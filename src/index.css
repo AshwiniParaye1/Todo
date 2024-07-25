@@ -1,8 +1,13 @@
+@font-face {
+  font-family: "Virgil";
+  src: url("/public/Virgil.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Virgil", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -23,6 +28,7 @@ a:hover {
 }
 
 body {
+  font-family: "Virgil", sans-serif;
   margin: 0;
   display: flex;
   place-items: center;
