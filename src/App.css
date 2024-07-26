@@ -43,7 +43,9 @@
 
 input[type="text"] {
   background-color: transparent;
+  border-radius: 5px;
 }
 input[type="checkbox"] {
   background-color: transparent;
+  border-radius: 5px;
 }
