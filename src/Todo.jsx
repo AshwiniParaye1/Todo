@@ -1,4 +1,7 @@
 import { useState } from "react";
+import edit from "../public/edit.png";
+import deleteBtn from "../public/delete.png";
+import saveBtn from "../public/save-file.png";
 
 export default function Todo() {
   const [isVisible, setIsVisible] = useState(false);
@@ -88,7 +91,13 @@ export default function Todo() {
                   onChange={(e) => setEditingText(e.target.value)}
                   style={{ marginRight: "10px" }}
                 />
-                <button onClick={() => handleSaveEdit(index)}>Save</button>
+                <button onClick={() => handleSaveEdit(index)}>
+                  <img
+                    src={saveBtn}
+                    alt="Save"
+                    style={{ width: "30px", height: "30px" }}
+                  />
+                </button>
               </>
             ) : (
               <>
@@ -103,13 +112,21 @@ export default function Todo() {
                   onClick={() => handleEditTodo(index)}
                   style={{ marginLeft: "10px" }}
                 >
-                  Edit
+                  <img
+                    src={edit}
+                    alt="Edit"
+                    style={{ width: "30px", height: "30px" }}
+                  />
                 </button>
                 <button
                   onClick={() => handleDeleteTodo(index)}
                   style={{ marginLeft: "10px" }}
                 >
-                  Delete
+                  <img
+                    src={deleteBtn}
+                    alt="Delete"
+                    style={{ width: "30px", height: "30px" }}
+                  />
                 </button>
               </>
             )}
