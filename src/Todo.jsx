@@ -1,7 +1,7 @@
 import { useState } from "react";
-import edit from "../public/edit.png";
-import deleteBtn from "../public/delete.png";
-import saveBtn from "../public/save-file.png";
+import editIcon from "../public/edit.png";
+import deleteIcon from "../public/delete.png";
+import saveIcon from "../public/save-file.png";
 
 export default function Todo() {
   const [isVisible, setIsVisible] = useState(false);
@@ -91,12 +91,24 @@ export default function Todo() {
                   onChange={(e) => setEditingText(e.target.value)}
                   style={{ marginRight: "10px" }}
                 />
-                <button onClick={() => handleSaveEdit(index)}>
-                  <img
-                    src={saveBtn}
-                    alt="Save"
-                    style={{ width: "30px", height: "30px" }}
-                  />
+                <button
+                  onClick={() => handleSaveEdit(index)}
+                  style={{
+                    background: "none",
+                    border: "none",
+                    padding: "0",
+                    marginLeft: "10px",
+                    cursor: "pointer",
+                  }}
+                >
+                  <div className="tooltip">
+                    <img
+                      src={saveIcon}
+                      alt="Save"
+                      style={{ width: "30px", height: "30px" }}
+                    />
+                    <span className="tooltiptext">Save</span>
+                  </div>
                 </button>
               </>
             ) : (
@@ -110,23 +122,41 @@ export default function Todo() {
                 </span>
                 <button
                   onClick={() => handleEditTodo(index)}
-                  style={{ marginLeft: "10px" }}
+                  style={{
+                    background: "none",
+                    border: "none",
+                    padding: "0",
+                    marginLeft: "10px",
+                    cursor: "pointer",
+                  }}
                 >
-                  <img
-                    src={edit}
-                    alt="Edit"
-                    style={{ width: "30px", height: "30px" }}
-                  />
+                  <div className="tooltip">
+                    <img
+                      src={editIcon}
+                      alt="Edit"
+                      style={{ width: "30px", height: "30px" }}
+                    />
+                    <span className="tooltiptext">Edit</span>
+                  </div>
                 </button>
                 <button
                   onClick={() => handleDeleteTodo(index)}
-                  style={{ marginLeft: "10px" }}
+                  style={{
+                    background: "none",
+                    border: "none",
+                    padding: "0",
+                    marginLeft: "10px",
+                    cursor: "pointer",
+                  }}
                 >
-                  <img
-                    src={deleteBtn}
-                    alt="Delete"
-                    style={{ width: "30px", height: "30px" }}
-                  />
+                  <div className="tooltip">
+                    <img
+                      src={deleteIcon}
+                      alt="Delete"
+                      style={{ width: "30px", height: "30px" }}
+                    />
+                    <span className="tooltiptext">Delete</span>
+                  </div>
                 </button>
               </>
             )}
