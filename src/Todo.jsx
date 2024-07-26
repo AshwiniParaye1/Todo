@@ -57,6 +57,8 @@ export default function Todo() {
           <div style={{ display: "flex", alignItems: "center" }}>
             <input
               type="text"
+              id="newTodo"
+              name="newTodo"
               value={newTodo}
               onChange={(e) => setNewTodo(e.target.value)}
               style={{ marginRight: "10px" }}
@@ -70,6 +72,8 @@ export default function Todo() {
           <li key={index} style={{ display: "flex", alignItems: "center" }}>
             <input
               type="checkbox"
+              id={`todo-${index}`}
+              name={`todo-${index}`}
               checked={todo.completed}
               onChange={() => handleToggleComplete(index)}
               style={{ marginRight: "10px" }}
@@ -78,6 +82,8 @@ export default function Todo() {
               <>
                 <input
                   type="text"
+                  id={`editTodo-${index}`}
+                  name={`editTodo-${index}`}
                   value={editingText}
                   onChange={(e) => setEditingText(e.target.value)}
                   style={{ marginRight: "10px" }}
