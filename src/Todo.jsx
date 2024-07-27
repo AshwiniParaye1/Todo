@@ -16,6 +16,7 @@ export default function Todo() {
 
   const handleAddTodo = () => {
     if (newTodo.trim()) {
+      console.log(newTodo);
       setTodos([...todos, { text: newTodo, completed: false }]);
       setNewTodo("");
       setIsVisible(false);
